@@ -18,7 +18,7 @@ class TableViewController: UITableViewController{
     override func viewDidLoad() {
         print("TableViewController View Did Load")
         //Add New Meme button to UINavigationBar
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: "launchNewMemeController")
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: "launchNewMemeController")
         uiTableView.delegate = self
         uiTableView.dataSource = self
         
@@ -58,6 +58,10 @@ class TableViewController: UITableViewController{
         let memeDetailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailController") as! MemeDetailController
         memeDetailController.meme = selectedMeme
         self.navigationController!.pushViewController(memeDetailController, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 
 

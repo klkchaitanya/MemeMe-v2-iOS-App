@@ -13,14 +13,21 @@ class CollectionViewController:UICollectionViewController{
     
     @IBOutlet var uiCollectionView: UICollectionView!
     var allMemes = Meme.allMemes
-
+    @IBOutlet weak var uiCollectionViewFlowLayout: UICollectionViewFlowLayout!
+    
     override func viewDidLoad() {
         print("CollectionViewController viewDidLoad")
         //Add New Meme button to UINavigationBar
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: "launchNewMemeController")
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: "launchNewMemeController")
         uiCollectionView.delegate = self
         uiCollectionView.dataSource = self
-
+        
+        //FlowLayout
+        let space:CGFloat = 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        uiCollectionViewFlowLayout.minimumInteritemSpacing = space
+        uiCollectionViewFlowLayout.minimumLineSpacing = space
+        uiCollectionViewFlowLayout.itemSize = CGSize(width: dimension, height: dimension)
     }
     
     override func viewWillAppear(_ animated: Bool) {

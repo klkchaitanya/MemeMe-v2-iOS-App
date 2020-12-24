@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-1193" y="-696"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="0G3-KY-6gw">
             <objects>
                 <collectionViewController id="rzN-4Y-5wU" customClass="CollectionViewController" customModule="MeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,9 +69,16 @@
                             <outlet property="delegate" destination="rzN-4Y-5wU" id="vUE-gQ-njU"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="NIl-Jg-WJA"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="NIl-Jg-WJA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hd6-2Y-5fP">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="bza-Xa-jrO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="uiCollectionView" destination="SfH-kT-edt" id="Lj3-SE-4F0"/>
+                        <outlet property="uiCollectionViewFlowLayout" destination="E3X-8z-Nvp" id="wd6-RD-1mS"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABq-fu-mhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -113,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="-1148" y="43"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="ueE-Gg-HAw">
             <objects>
                 <tableViewController id="Kcq-AK-eDA" customClass="TableViewController" customModule="MeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,7 +129,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="100" id="c81-9K-aDK" customClass="TableViewCell" customModule="MeMe" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="1" indentationWidth="1" reuseIdentifier="TableViewCell" rowHeight="100" id="c81-9K-aDK" customClass="TableViewCell" customModule="MeMe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c81-9K-aDK" id="Ucy-d5-BQn">
@@ -163,7 +170,13 @@
                             <outlet property="delegate" destination="Kcq-AK-eDA" id="Qsv-hE-pho"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WXz-uz-C6y"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="WXz-uz-C6y">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Dd9-Yx-TPZ">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="N9o-Uz-erN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="is9-yF-903" id="GpA-3k-pnM"/>
                         <outlet property="uiTableView" destination="is9-yF-903" id="EAG-1r-idR"/>
@@ -190,7 +203,8 @@
                             <constraint firstItem="K3B-uf-qPY" firstAttribute="centerY" secondItem="jrT-Ht-2Qe" secondAttribute="centerY" id="0ya-Qf-cto"/>
                             <constraint firstItem="K3B-uf-qPY" firstAttribute="centerX" secondItem="jrT-Ht-2Qe" secondAttribute="centerX" id="7DP-VX-bAB"/>
                             <constraint firstItem="K3B-uf-qPY" firstAttribute="leading" secondItem="ktf-5m-31z" secondAttribute="leading" id="DUg-5u-F7T"/>
-                            <constraint firstItem="K3B-uf-qPY" firstAttribute="top" secondItem="ktf-5m-31z" secondAttribute="top" constant="20" id="sGQ-uk-C8r"/>
+                            <constraint firstItem="K3B-uf-qPY" firstAttribute="trailing" secondItem="ktf-5m-31z" secondAttribute="trailing" id="EAG-iA-3nr"/>
+                            <constraint firstItem="K3B-uf-qPY" firstAttribute="top" secondItem="ktf-5m-31z" secondAttribute="top" constant="20" id="a4t-Q4-4hx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ktf-5m-31z"/>
                     </view>
@@ -200,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dx1-v7-Mhh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434.39999999999998" y="47.226386806596707"/>
+            <point key="canvasLocation" x="1447" y="-262"/>
         </scene>
         <!--Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -282,11 +296,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="42"/>
+            <point key="canvasLocation" x="730" y="-262"/>
         </scene>
     </scenes>
     <resources>
         <image name="collection_30x30" width="30" height="30"/>
         <image name="table_30x30" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="N9o-Uz-erN"/>
+    </inferredMetricsTieBreakers>
 </document>

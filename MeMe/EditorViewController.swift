@@ -54,7 +54,9 @@ class EditorViewController: UIViewController, UIImagePickerControllerDelegate, U
         uiBarButtonItem_Cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action:"cancelMeme")
         navigationItem.leftBarButtonItem = uiBarButtonItem_Share
         navigationItem.rightBarButtonItem = uiBarButtonItem_Cancel
+        navigationItem.title = "Meme Editor"
         navigationBar.setItems([navigationItem], animated: true)
+    
         
         setLaunchStateConfiguration()
     }
@@ -68,7 +70,7 @@ class EditorViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         //Disable share, cancel button as image is not set/selected yet.
         uiBarButtonItem_Share.isEnabled = false
-        uiBarButtonItem_Cancel.isEnabled = false
+        //uiBarButtonItem_Cancel.isEnabled = false
     }
     
     func setupTextFieldForLaunchState(_ textField: UITextField, _ defaultText: String) {
@@ -121,6 +123,7 @@ class EditorViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @objc func cancelMeme(){
         setLaunchStateConfiguration()
+        dismiss(animated: true)
     }
     
     @IBAction func PickImageFromAlbum(_ sender: Any) {

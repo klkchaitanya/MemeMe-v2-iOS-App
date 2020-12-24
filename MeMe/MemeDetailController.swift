@@ -16,6 +16,7 @@ class MemeDetailController:UIViewController {
     
     override func viewDidLoad() {
         print("MemeDetailController viewDidLoad")
+        navigationItem.title = "Meme Details"
         memeDetailImage?.image = meme.memedImage
     }
 }
